@@ -1,0 +1,37 @@
+// JavaScript Strings
+
+// JavaScript strings are for storing and manipulating text.
+
+// example -> let text = "John Doe";
+
+
+
+// JavaScript Strings as Objects
+
+// Normally, JavaScript strings are primitive values, created from literals:
+
+// let x = "John";
+// But strings can also be defined as objects with the keyword new:
+
+// let y = new String("John");
+
+
+// just know the way to also create object with string but this way is not good to Use.
+
+let x = "John";        // x is a string
+let y = new String("John");  // y is an object
+console.log(x==y);  // true
+
+console.log(x===y);  // false
+
+
+
+
+
+
+// Comparing two JavaScript objects always returns false.
+let a = new String("kopal")     
+let b = new String("sita")
+ console.log(a==b);  // false
+ console.log(a===b);  // false
+
