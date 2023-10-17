@@ -1,0 +1,46 @@
+<!-- // Api.github.com/user/kopalgangrade
+// basic information
+
+// https:/randomuser.me
+
+// json formatter -> use for API reading
+
+// XMLHttpRequest  -objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
+//  used in AJAX (Asynchronous JavaScript and XML)Programming.
+
+// 0 (uninitialized) or (request not initialized)
+// 1 (loading) or (server connection established)
+// 2 (loaded) or (request received)
+// 3 (interactive) or (processing request)
+// 4 (complete) or (request finished and response is ready) -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const requestUrl  = 'https://api.github.com/users/hiteshchoudhary'
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log('here');
+            if (xhr.ready===4){
+
+                // If JSON will not include so typeof will be string. after using JSOn typeof is object
+                const data=JSON.parse(this.responseText)
+                console.log(typeof data);
+                console.log(data.followers);
+            }
+        }
+        
+        xhr.send()
+    </script>
+</body>
+</html>
