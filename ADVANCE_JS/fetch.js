@@ -1,3 +1,7 @@
+// The fetch() method starts the process of fetching a resource from a server.
+
+// The fetch() method returns a Promise that resolves to a Response object.
+
 // Fetch() is a method in the browser, threw fetch data can be take from server using HTTP/HTTPS
 
 // only accepts network errors
@@ -48,4 +52,15 @@ fetch('https://api.github.com/users'),{
 fetch('https://api.github.com/users')
 .then(response=> response.ok)
 .then(response=>console.log(response))
-.catch(err=>console.log('err',err);)
+.catch(err=>console.log('err',err))
+
+
+
+
+// Fetch throw Async / Awit 
+async function getText(file) {
+    let x = await fetch(file);
+    let y = await x.text();
+    myDisplay(y);
+  }
+
